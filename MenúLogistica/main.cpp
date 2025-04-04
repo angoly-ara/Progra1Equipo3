@@ -5,7 +5,10 @@ using namespace std;
 // Declaración de funciones
 void mostrarMenuPrincipal();
 void gestionPedidos();
-void facturacionYAnalisis(); // <-- Nueva función
+void controlInventario();
+void enviosYTransportes();
+void facturacionYAnalisis();
+void reportesYAnalisis();
 
 // Funciones de facturación y análisis
 void generarFactura() {
@@ -24,16 +27,54 @@ void verReportesFinancieros() {
     cout << "[Mostrando reportes financieros...]" << endl;
 }
 
+// Funciones de control de inventario
+void stockDisponible() {
+    cout << "[Revisando stock disponible...]" << endl;
+}
+
+void registroMercancia() {
+    cout << "[Registrando mercancia nueva...]" << endl;
+}
+
+void ajusteInventario() {
+    cout << "[Realizando ajustes en el inventario...]" << endl;
+}
+
+void verReportesExistencia() {
+    cout << "[Mostrando reportes de existencias...]" << endl;
+}
+
+// Funciones de envíos y transportes
+void generarGuiaEnvio() {
+    cout << "Generando guia de envio..." << endl;
+}
+
+void asignarTransportista() {
+    cout << "Asignando transportista..." << endl;
+}
+
+void rastrearEnvios() {
+    cout << "Rastreando envios..." << endl;
+}
+
+void confirmarEntrega() {
+    cout << "Confirmando entrega..." << endl;
+}
+
+void gestionarDevoluciones() {
+    cout << "Gestionando devoluciones..." << endl;
+}
+
 int main() {
     string nombre;
 
     // Solicitar nombre al usuario
     system("cls");
     cout << "========================\n";
-    cout << "  SISTEMA  LOGISTICA\n";
+    cout << "  SISTEMA DE LOGISTICA\n";
     cout << "========================\n";
     cout << "Por favor ingrese su nombre: ";
-    cin >> nombre;
+    getline(cin, nombre);  // Usamos getline para permitir nombres con espacios
 
     // Mostrar bienvenida
     cout << "\nBienvenido, " << nombre << "!\n";
@@ -52,19 +93,16 @@ int main() {
                 gestionPedidos();
                 break;
             case 2:
-                cout << "\nControl de Inventario (pendiente)\n";
-                system("pause");
+                controlInventario();
                 break;
             case 3:
-                cout << "\nEnvios y Transportes (pendiente)\n";
-                system("pause");
+                enviosYTransportes();
                 break;
             case 4:
-                facturacionYAnalisis(); // <-- Aquí se llama la función nueva
+                facturacionYAnalisis();
                 break;
             case 5:
-                cout << "\nReportes y Analisis (pendiente)\n";
-                system("pause");
+                reportesYAnalisis();
                 break;
             case 0:
                 cout << "\nHasta luego, " << nombre << "!\n";
@@ -103,7 +141,7 @@ void gestionPedidos() {
         cout << "3. Modificar pedido\n";
         cout << "4. Cancelar pedido\n";
         cout << "5. Historial de pedidos\n";
-        cout << "6. Volver al menu principal\n";
+        cout << "0. Volver al menu principal\n";  // Cambiado a 0 para consistencia
         cout << "========================\n";
         cout << "Seleccione una opcion: ";
         cin >> opcion;
@@ -129,58 +167,189 @@ void gestionPedidos() {
                 cout << "\nMostrando historial...\n";
                 system("pause");
                 break;
-            case 6:
+            case 0:
+                cout << "\nVolviendo al menu principal...\n";
                 break;
             default:
                 cout << "\nSeleccione una opcion valida, por favor.\n";
                 system("pause");
         }
-    } while(opcion != 6);
+    } while(opcion != 0);
 }
 
-// NUEVA FUNCION PARA FACTURACION Y ANALISIS
-void facturacionYAnalisis() {
+void controlInventario() {
     int opcion;
-    bool repetir = true;
-
     do {
         system("cls");
-        cout << "\nFACTURACION Y ADMINISTRACION" << endl;
-        cout << "-----------------------------------" << endl;
-        cout << "1. Generar factura" << endl;
-        cout << "2. Consultar estados de pago" << endl;
-        cout << "3. Registro de pagos" << endl;
-        cout << "4. Ver reportes financieros" << endl;
-        cout << "5. Volver al menu principal" << endl;
-        cout << "Ingrese una opcion: ";
+        cout << "\n========================\n";
+        cout << "  CONTROL DE INVENTARIO\n";
+        cout << "========================\n";
+        cout << "1. Consultar stock disponible\n";
+        cout << "2. Registrar nueva mercancia\n";
+        cout << "3. Ajustes de inventario\n";
+        cout << "4. Ver reportes de existencias\n";
+        cout << "0. Volver al menu principal\n";  // Cambiado a 0 para consistencia
+        cout << "========================\n";
+        cout << "Seleccione una opcion: ";
+        cin >> opcion;
+
+        switch (opcion) {
+            case 1:
+                stockDisponible();
+                system("pause");
+                break;
+            case 2:
+                registroMercancia();
+                system("pause");
+                break;
+            case 3:
+                ajusteInventario();
+                system("pause");
+                break;
+            case 4:
+                verReportesExistencia();
+                system("pause");
+                break;
+            case 0:
+                cout << "\nVolviendo al menu principal...\n";
+                break;
+            default:
+                cout << "\nOpcion no valida\n";
+                system("pause");
+        }
+    } while (opcion != 0);
+}
+
+void enviosYTransportes() {
+    int opcion;
+    do {
+        system("cls");
+        cout << "\n========================\n";
+        cout << "  ENVIOS Y TRANSPORTES\n";
+        cout << "========================\n";
+        cout << "1. Generar guia de envio\n";
+        cout << "2. Asignar transportista\n";
+        cout << "3. Rastrear envios\n";
+        cout << "4. Confirmacion de entrega\n";
+        cout << "5. Gestion de devoluciones\n";
+        cout << "0. Volver al menu principal\n";  // Cambiado a 0 para consistencia
+        cout << "========================\n";
+        cout << "Seleccione una opcion: ";
+        cin >> opcion;
+
+        switch (opcion) {
+            case 1:
+                generarGuiaEnvio();
+                system("pause");
+                break;
+            case 2:
+                asignarTransportista();
+                system("pause");
+                break;
+            case 3:
+                rastrearEnvios();
+                system("pause");
+                break;
+            case 4:
+                confirmarEntrega();
+                system("pause");
+                break;
+            case 5:
+                gestionarDevoluciones();
+                system("pause");
+                break;
+            case 0:
+                cout << "\nVolviendo al menu principal...\n";
+                break;
+            default:
+                cout << "\nOpcion no valida. Intente de nuevo.\n";
+                system("pause");
+        }
+    } while (opcion != 0);
+}
+
+void facturacionYAnalisis() {
+    int opcion;
+    do {
+        system("cls");
+        cout << "\n========================\n";
+        cout << "  FACTURACION Y ADMINISTRACION\n";
+        cout << "========================\n";
+        cout << "1. Generar factura\n";
+        cout << "2. Consultar estados de pago\n";
+        cout << "3. Registro de pagos\n";
+        cout << "4. Ver reportes financieros\n";
+        cout << "0. Volver al menu principal\n";  // Cambiado a 0 para consistencia
+        cout << "========================\n";
+        cout << "Seleccione una opcion: ";
         cin >> opcion;
 
         switch (opcion) {
             case 1:
                 generarFactura();
+                system("pause");
                 break;
             case 2:
                 consultarEstadoPago();
+                system("pause");
                 break;
             case 3:
                 registrarPago();
+                system("pause");
                 break;
             case 4:
                 verReportesFinancieros();
+                system("pause");
                 break;
-            case 5:
-                repetir = false;
+            case 0:
+                cout << "\nVolviendo al menu principal...\n";
                 break;
             default:
-                cout << "Opcion no valida" << endl;
+                cout << "\nOpcion no valida\n";
+                system("pause");
+        }
+    } while (opcion != 0);
+}
+
+void reportesYAnalisis() {
+    int opcion;
+    do {
+        system("cls");
+        cout << "\n========================\n";
+        cout << "   REPORTES Y ANALISIS\n";
+        cout << "========================\n";
+        cout << "1. Informe de ventas\n";
+        cout << "2. Analisis de tiempos de entrega\n";
+        cout << "3. Reporte de inventarios\n";
+        cout << "4. Evaluacion de proveedores\n";
+        cout << "0. Volver al menu principal\n";  // Cambiado a 0 para consistencia
+        cout << "========================\n";
+        cout << "Seleccione una opcion: ";
+        cin >> opcion;
+
+        switch(opcion) {
+            case 1:
+                cout << "\nMostrando informe de ventas...\n";
+                system("pause");
                 break;
+            case 2:
+                cout << "\nAnalizando tiempos de entrega...\n";
+                system("pause");
+                break;
+            case 3:
+                cout << "\nGenerando reporte de inventarios...\n";
+                system("pause");
+                break;
+            case 4:
+                cout << "\nEvaluando proveedores...\n";
+                system("pause");
+                break;
+            case 0:
+                cout << "\nVolviendo al menu principal...\n";
+                break;
+            default:
+                cout << "\nOpcion no valida.\n";
+                system("pause");
         }
-
-        if (repetir) {
-            cout << "\nPresione enter para continuar...";
-            cin.ignore();
-            cin.get();
-        }
-
-    } while (repetir);
+    } while(opcion != 0);
 }
