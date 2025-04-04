@@ -2,8 +2,27 @@
 #include <string>
 using namespace std;
 
+// Declaración de funciones
 void mostrarMenuPrincipal();
 void gestionPedidos();
+void facturacionYAnalisis(); // <-- Nueva función
+
+// Funciones de facturación y análisis
+void generarFactura() {
+    cout << "[Generando factura...]" << endl;
+}
+
+void consultarEstadoPago() {
+    cout << "[Consultando estados de pago...]" << endl;
+}
+
+void registrarPago() {
+    cout << "[Registrando un pago...]" << endl;
+}
+
+void verReportesFinancieros() {
+    cout << "[Mostrando reportes financieros...]" << endl;
+}
 
 int main() {
     string nombre;
@@ -41,8 +60,7 @@ int main() {
                 system("pause");
                 break;
             case 4:
-                cout << "\nFacturacion y Administracion (pendiente)\n";
-                system("pause");
+                facturacionYAnalisis(); // <-- Aquí se llama la función nueva
                 break;
             case 5:
                 cout << "\nReportes y Analisis (pendiente)\n";
@@ -118,4 +136,51 @@ void gestionPedidos() {
                 system("pause");
         }
     } while(opcion != 6);
+}
+
+// NUEVA FUNCION PARA FACTURACION Y ANALISIS
+void facturacionYAnalisis() {
+    int opcion;
+    bool repetir = true;
+
+    do {
+        system("cls");
+        cout << "\nFACTURACION Y ADMINISTRACION" << endl;
+        cout << "-----------------------------------" << endl;
+        cout << "1. Generar factura" << endl;
+        cout << "2. Consultar estados de pago" << endl;
+        cout << "3. Registro de pagos" << endl;
+        cout << "4. Ver reportes financieros" << endl;
+        cout << "5. Volver al menu principal" << endl;
+        cout << "Ingrese una opcion: ";
+        cin >> opcion;
+
+        switch (opcion) {
+            case 1:
+                generarFactura();
+                break;
+            case 2:
+                consultarEstadoPago();
+                break;
+            case 3:
+                registrarPago();
+                break;
+            case 4:
+                verReportesFinancieros();
+                break;
+            case 5:
+                repetir = false;
+                break;
+            default:
+                cout << "Opcion no valida" << endl;
+                break;
+        }
+
+        if (repetir) {
+            cout << "\nPresione enter para continuar...";
+            cin.ignore();
+            cin.get();
+        }
+
+    } while (repetir);
 }
