@@ -1,0 +1,71 @@
+# depslib dependency file v1.0
+1745814803 source:c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú\src\bitacora.cpp
+	"bitacora.h"
+	<iostream>
+	<iomanip>
+
+1745814803 c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú\include\bitacora.h
+	<string>
+	<fstream>
+
+1745851771 source:c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú\src\envios.cpp
+	"envios.h"
+	<iostream>
+
+1745814803 c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú\include\envios.h
+	"bitacora.h"
+	"usuarios.h"
+
+1745814945 c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú\include\usuarios.h
+	<string>
+	"bitacora.h"
+
+1745851790 source:c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú\src\facturacion.cpp
+	"facturacion.h"
+	<iostream>
+
+1745814803 c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú\include\facturacion.h
+	"bitacora.h"
+	"usuarios.h"
+
+1745851811 source:c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú\src\inventario.cpp
+	"inventario.h"
+	<iostream>
+
+1745814803 c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú\include\inventario.h
+	"bitacora.h"
+	"usuarios.h"
+
+1745851827 source:c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú\src\pedidos.cpp
+	"pedidos.h"
+	<iostream>
+
+1745814803 c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú\include\pedidos.h
+	"bitacora.h"
+	"usuarios.h"
+
+1745814803 source:c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú\src\reportes.cpp
+	"reportes.h"
+	<iostream>
+
+1745814803 c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú\include\reportes.h
+	"bitacora.h"
+	"usuarios.h"
+
+1745814945 source:c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú\src\usuarios.cpp
+	"usuarios.h"
+	<iostream>
+	<fstream>
+	<conio.h>
+	<iomanip>
+
+1745815143 source:c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú\main.cpp
+	<iostream>
+	"usuarios.h"
+	"pedidos.h"
+	"inventario.h"
+	"envios.h"
+	"facturacion.h"
+	"reportes.h"
+	"bitacora.h"
+

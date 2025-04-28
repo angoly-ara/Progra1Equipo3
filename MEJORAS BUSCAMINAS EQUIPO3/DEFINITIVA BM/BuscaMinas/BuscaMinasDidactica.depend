@@ -340,3 +340,56 @@
 1743723076 c:\users\50240\documents\programacion1\tareas_progra1\tareas grupales marzo 2025\documentaci”n grupo 3\copia de bm\buscaminas\include\marcador.h
 	<string>
 
+1743568095 source:c:\users\50240\documents\programacion1\progra1equipo3\mejoras buscaminas equipo3\definitiva bm\buscaminas\src\celda.cpp
+	"Celda.h"
+	<iostream>
+
+1743568061 c:\users\50240\documents\programacion1\progra1equipo3\mejoras buscaminas equipo3\definitiva bm\buscaminas\include\celda.h
+
+1743576319 source:c:\users\50240\documents\programacion1\progra1equipo3\mejoras buscaminas equipo3\definitiva bm\buscaminas\src\config.cpp
+	<iostream>
+	<unistd.h>
+	"Config.h"
+
+1743576319 c:\users\50240\documents\programacion1\progra1equipo3\mejoras buscaminas equipo3\definitiva bm\buscaminas\include\config.h
+	<vector>
+	"Jugador.h"
+
+1743587649 c:\users\50240\documents\programacion1\progra1equipo3\mejoras buscaminas equipo3\definitiva bm\buscaminas\include\jugador.h
+	<string>
+
+1743728467 source:c:\users\50240\documents\programacion1\progra1equipo3\mejoras buscaminas equipo3\definitiva bm\buscaminas\src\juego.cpp
+	"Juego.h"
+	<iostream>
+	<fstream>
+	<ctime>
+	<iomanip>
+	"marcador.h"
+
+1743728087 c:\users\50240\documents\programacion1\progra1equipo3\mejoras buscaminas equipo3\definitiva bm\buscaminas\include\juego.h
+	"Tablero.h"
+	"Jugador.h"
+	<ctime>
+	<iomanip>
+	<string>
+	"Marcador.h"
+
+1743586754 c:\users\50240\documents\programacion1\progra1equipo3\mejoras buscaminas equipo3\definitiva bm\buscaminas\include\tablero.h
+	<iostream>
+	<vector>
+	"Celda.h"
+
+1743723076 c:\users\50240\documents\programacion1\progra1equipo3\mejoras buscaminas equipo3\definitiva bm\buscaminas\include\marcador.h
+	<string>
+
+1743587627 source:c:\users\50240\documents\programacion1\progra1equipo3\mejoras buscaminas equipo3\definitiva bm\buscaminas\src\jugador.cpp
+	"Jugador.h"
+
+1743723076 source:c:\users\50240\documents\programacion1\progra1equipo3\mejoras buscaminas equipo3\definitiva bm\buscaminas\src\marcador.cpp
+	"Marcador.h"
+
+1743723076 source:c:\users\50240\documents\programacion1\progra1equipo3\mejoras buscaminas equipo3\definitiva bm\buscaminas\src\tablero.cpp
+	"Tablero.h"
+	<sstream>
+	<iostream>
+
