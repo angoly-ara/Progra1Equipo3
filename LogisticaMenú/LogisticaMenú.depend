@@ -8,15 +8,16 @@
 	<string>
 	<fstream>
 
-1745851771 source:c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú\src\envios.cpp
+1746327750 source:c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú\src\envios.cpp
 	"envios.h"
 	<iostream>
 
-1745814803 c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú\include\envios.h
+1746327639 c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú\include\envios.h
 	"bitacora.h"
 	"usuarios.h"
+	<string>
 
-1745814945 c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú\include\usuarios.h
+1745853963 c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú\include\usuarios.h
 	<string>
 	"bitacora.h"
 
@@ -36,15 +37,17 @@
 	"bitacora.h"
 	"usuarios.h"
 
-1745851827 source:c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú\src\pedidos.cpp
+1746327784 source:c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú\src\pedidos.cpp
 	"pedidos.h"
 	<iostream>
 
-1745814803 c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú\include\pedidos.h
+1746327683 c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú\include\pedidos.h
 	"bitacora.h"
 	"usuarios.h"
+	<string>
+	<vector>
 
-1745814803 source:c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú\src\reportes.cpp
+1745851843 source:c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú\src\reportes.cpp
 	"reportes.h"
 	<iostream>
 
@@ -52,7 +55,7 @@
 	"bitacora.h"
 	"usuarios.h"
 
-1745814945 source:c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú\src\usuarios.cpp
+1746327909 source:c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú\src\usuarios.cpp
 	"usuarios.h"
 	<iostream>
 	<fstream>

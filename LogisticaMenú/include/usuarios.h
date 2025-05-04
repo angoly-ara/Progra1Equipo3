@@ -13,11 +13,11 @@ public:
     usuarios();
     ~usuarios();
     bool loginUsuarios();
-    void menuUsuarios();
+    void registrarUsuario(); // Movido a público para acceso desde login
     bool buscarUsuario(const std::string& user, const std::string& pass);
     std::string getNombre();
     void setNombre(const std::string& nombre);
-    void registrarUsuario();
+    void menuUsuarios();
     void consultarUsuarios();
 };
 

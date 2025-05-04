@@ -28,39 +28,89 @@ bool usuarios::loginUsuarios() {
         cout << "\t\t========================================" << endl;
         cout << "\t\t| AUTENTICACION DE USUARIOS - LOGISTICA |" << endl;
         cout << "\t\t========================================" << endl;
-        cout << "\t\tUsuario: ";
-        cin >> user;
-        cout << "\t\tContrasena: ";
+        cout << "\t\t1. Iniciar sesion" << endl;
+        cout << "\t\t2. Registrarse (nuevo usuario)" << endl;
+        cout << "\t\t========================================" << endl;
+        cout << "\t\tOpcion: ";
+        int opcion;
+        cin >> opcion;
+        cin.ignore();
 
-        // Ocultar contraseña con *
-        char ch;
-        pass = "";
-        while ((ch = _getch()) != 13) { // 13 = Enter
-            if (ch == 8 && !pass.empty()) { // 8 = Backspace
-                pass.pop_back();
-                cout << "\b \b";
-            } else if (ch != 8) {
-                pass.push_back(ch);
-                cout << '*';
+        if (opcion == 1) {
+            cout << "\t\tUsuario: ";
+            getline(cin, user);
+            cout << "\t\tContrasena: ";
+
+            char ch;
+            pass = "";
+            while ((ch = _getch()) != 13) {
+                if (ch == 8 && !pass.empty()) {
+                    pass.pop_back();
+                    cout << "\b \b";
+                } else if (ch != 8) {
+                    pass.push_back(ch);
+                    cout << '*';
+                }
             }
-        }
 
-        if (buscarUsuario(user, pass)) {
-            acceso = true;
-            nombre = user;
-            auditoria.insertar(nombre, "000", "LOGIN");
-            cout << "\n\t\tAutenticacion exitosa. Bienvenido!";
-            system("pause");
-            break;
-        } else {
-            intentos++;
-            auditoria.insertar(user, "000", "LOGIN-FAIL");
-            cout << "\n\t\tUsuario o contrasena incorrectos. Intentos restantes: " << 3 - intentos;
+            if (buscarUsuario(user, pass)) {
+                acceso = true;
+                nombre = user;
+                auditoria.insertar(nombre, "000", "LOGIN");
+                cout << "\n\t\tAutenticacion exitosa. Bienvenido!";
+                system("pause");
+                break;
+            } else {
+                intentos++;
+                auditoria.insertar(user, "000", "LOGIN-FAIL");
+                cout << "\n\t\tUsuario o contrasena incorrectos. Intentos restantes: " << 3 - intentos;
+                system("pause");
+            }
+        } else if (opcion == 2) {
+            registrarUsuario(); // Llama al registro directamente
+            cout << "\n\t\tAhora puede iniciar sesion con sus nuevas credenciales";
             system("pause");
         }
     } while (intentos < 3);
 
     return acceso;
+}
+
+void usuarios::registrarUsuario() {
+    system("cls");
+    ofstream archivo("usuarios.txt", ios::app);
+    if (!archivo.is_open()) {
+        cerr << "\n\t\tError al abrir archivo de usuarios!";
+        return;
+    }
+
+    cout << "\t\t========================================" << endl;
+    cout << "\t\t| REGISTRO DE NUEVO USUARIO            |" << endl;
+    cout << "\t\t========================================" << endl;
+
+    cout << "\t\tID (ej: 1001): ";
+    getline(cin, id);
+    cout << "\t\tNombre de usuario: ";
+    getline(cin, nombre);
+    cout << "\t\tContrasena: ";
+
+    char ch;
+    contrasena = "";
+    while ((ch = _getch()) != 13) {
+        if (ch == 8 && !contrasena.empty()) {
+            contrasena.pop_back();
+            cout << "\b \b";
+        } else if (ch != 8) {
+            contrasena.push_back(ch);
+            cout << '*';
+        }
+    }
+
+    archivo << id << " " << nombre << " " << contrasena << endl;
+    archivo.close();
+    auditoria.insertar(nombre, "000", "REG-USER");
+    cout << "\n\n\t\tUsuario registrado con exito!";
+    system("pause");
 }
 
 // Buscar usuario en archivo
@@ -110,42 +160,6 @@ void usuarios::menuUsuarios() {
     } while (opcion != 5);
 }
 
-// Registrar nuevo usuario
-void usuarios::registrarUsuario() {
-    system("cls");
-    ofstream archivo("usuarios.txt", ios::app);
-    if (!archivo.is_open()) {
-        cerr << "\n\t\tError al abrir archivo de usuarios!";
-        return;
-    }
-
-    cout << "\t\t========================================" << endl;
-    cout << "\t\t| REGISTRO DE NUEVO USUARIO            |" << endl;
-    cout << "\t\t========================================" << endl;
-    cout << "\t\tID: ";
-    cin >> id;
-    cout << "\t\tNombre: ";
-    cin >> nombre;
-    cout << "\t\tContrasena: ";
-
-    char ch;
-    contrasena = "";
-    while ((ch = _getch()) != 13) {
-        if (ch == 8 && !contrasena.empty()) {
-            contrasena.pop_back();
-            cout << "\b \b";
-        } else if (ch != 8) {
-            contrasena.push_back(ch);
-            cout << '*';
-        }
-    }
-
-    archivo << id << " " << nombre << " " << contrasena << endl;
-    archivo.close();
-    auditoria.insertar(nombre, "000", "REG-USER");
-    cout << "\n\t\tUsuario registrado con exito!";
-    system("pause");
-}
 
 // Consultar usuarios
 void usuarios::consultarUsuarios() {
