@@ -51,34 +51,34 @@ void Pedidos::gestionPedidos() {
 // Crea un nuevo pedido y registra la acción en la bitácora
 void Pedidos::crearPedido() {
     cout << "\n\t\t[Creando nuevo pedido...]" << endl;
-    auditoria.insertar(usuarioRegistrado.getNombre(), "100", "NUEVO PEDIDO");
+    auditoria.registrar(usuarioRegistrado.getNombre(), "PEDIDOS", "Pedido creado");
     system("pause");
 }
 
 // Consulta los pedidos existentes y registra la acción en la bitácora
 void Pedidos::consultarPedidos() {
     cout << "\n\t\t[Consultando nuevo pedido...]" << endl;
-    auditoria.insertar(usuarioRegistrado.getNombre(), "101", "CONSULTA PEDIDO");
+auditoria.registrar(usuarioRegistrado.getNombre(), "PEDIDOS", "CONSULTA PEDIDO");
     system("pause");
 }
 
 // Permite modificar un pedido existente y registra la acción
 void Pedidos::modificarPedido() {
     cout << "\n\t\t[Modificando pedido...]" << endl;
-    auditoria.insertar(usuarioRegistrado.getNombre(), "102", "MODIFICANDO PEDIDO");
+    auditoria.registrar(usuarioRegistrado.getNombre(), "PEDIDOS", "MODIFICANDO PEDIDO");
     system("pause");
 }
 
 // Cancela un pedido y registra la acción en la bitácora
 void Pedidos::cancelarPedido() {
     cout << "\n\t\t[Cancelando pedido...]" << endl;
-    auditoria.insertar(usuarioRegistrado.getNombre(), "103", "PEDIDO CANCELADO");
+    auditoria.registrar(usuarioRegistrado.getNombre(), "PEDIDOS", "Pedido cancelado");
     system("pause");
 }
 
 // Muestra el historial de pedidos y registra la acción
 void Pedidos::verHistorial() {
     cout << "\n\t\t[Viendo el Historial de pedidos...]" << endl;
-    auditoria.insertar(usuarioRegistrado.getNombre(), "104", "HISTORIAL PEDIDOS");
+    auditoria.registrar(usuarioRegistrado.getNombre(), "PEDIDOS", "HISTORIAL PEDIDOS");
     system("pause");
 }

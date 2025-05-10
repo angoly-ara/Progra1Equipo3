@@ -1,7 +1,11 @@
 #include <iostream>
+#include <vector>
+#include <string>
+
+// Incluir todos los headers necesarios
 #include "usuarios.h"
 #include "MenuPrincipal.h"
-#include "pedidos.h"  // Faltaban estos includes
+#include "pedidos.h"
 #include "inventario.h"
 #include "envios.h"
 #include "facturacion.h"
@@ -10,28 +14,27 @@
 #include "Clientes.h"
 #include "Proveedor.h"
 #include "Producto.h"
-#include "globals.h"
-
-// Instancias globales (como las tienes actualmente)
-usuarios usuarioRegistrado;
-bitacora auditoria;
-
-Pedidos gestorPedidos;
-Inventario gestorInventario;
-Envios gestorEnvios;
-Facturacion gestorFacturacion;
-Reportes gestorReportes;
+#include "bitacora.h"
+#include "globals.h"  // Incluir el archivo de globales
 
 int main() {
+    // Inicializar estructuras de datos
+    std::vector<Clientes> listaClientes;
+    std::vector<Proveedor> listaProveedores;
+    std::vector<Producto> listaProductos;
 
-    vector<Clientes> clientes;
-    vector<Proveedor> proveedores;
-    vector<Producto> productos;
-    usuarios usuarioActual;
+    Clientes::cargarDesdeArchivo(listaClientes);  // <- Esta línea es crucial
 
-    if (usuarioRegistrado.loginUsuarios()) {  // Login existente
-        MenuPrincipal::mostrar(clientes, proveedores, productos, usuarioActual);  // Menú principal con tu estilo
+    // Sistema de login
+    if (usuarioRegistrado.loginUsuarios()) {
+        // Mostrar menú principal si el login es exitoso
+        MenuPrincipal::mostrar(listaClientes, listaProveedores, listaProductos, usuarioRegistrado);
     }
-    std::cout << "** Hasta la próxima **\n";
+
+    // Mensaje de despedida
+    std::cout << "\n\t\t** Sistema de Logística - Hasta pronto **\n";
+
+
+    Clientes::guardarEnArchivo(listaClientes);
     return 0;
 }

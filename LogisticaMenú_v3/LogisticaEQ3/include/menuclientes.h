@@ -1,15 +1,13 @@
 #ifndef MENUCLIENTES_H
 #define MENUCLIENTES_H
-#include "clientes.h"
-#pragma once
-#include <vector>
-#include "usuarios.h"
 
-class Cliente;  // Forward declaration
+#include "Clientes.h"
+#include "usuarios.h"
+#include <vector>
 
 class MenuClientes {
 public:
-   static void mostrar(std::vector<Clientes>& lista, usuarios& usuarioActual);
+    static void mostrar(std::vector<Clientes>& listaClientes, usuarios& usuarioActual);
 };
 
-#endif // MENUCLIENTES_H
+#endif

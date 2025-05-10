@@ -1,17 +1,22 @@
 #ifndef GLOBALS_H
 #define GLOBALS_H
 #pragma once
+
 #include "pedidos.h"
 #include "inventario.h"
 #include "envios.h"
 #include "facturacion.h"
 #include "reportes.h"
+#include "usuarios.h"
+#include "bitacora.h"
 
-// Declaraciones (sin inicialización)
-extern Pedidos gestorPedidos;         // <-- Solo dice "existe en otro lugar"
-extern Inventario gestorInventario;   // <-- No crea la variable aquí
+// Declaraciones extern
+extern Pedidos gestorPedidos;
+extern Inventario gestorInventario;
 extern Envios gestorEnvios;
 extern Facturacion gestorFacturacion;
 extern Reportes gestorReportes;
+extern usuarios usuarioRegistrado;
+extern bitacora auditoria;
 
 #endif // GLOBALS_H

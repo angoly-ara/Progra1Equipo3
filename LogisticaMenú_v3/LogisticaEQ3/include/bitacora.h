@@ -4,23 +4,55 @@
 
 #include <string>
 #include <fstream>
-using namespace std;
+#include <chrono>
+#include <iomanip>
+#include <unordered_map>  // Necesario para std::unordered_map
 
-// Clase 'bitacora': Maneja el registro de acciones realizadas en el sistema.
-class bitacora {
+class CodigosBitacora {
 private:
-    string nombreUsuario;   // Nombre del usuario que realiza la acción
-    string codigoAccion;    // Código que identifica la acción
-    string descripcion;     // Descripción de la acción realizada
+    static std::unordered_map<std::string, int> rangos;
 public:
-    // Inserta una nueva entrada en la bitácora con los datos proporcionados
-    void insertar(string usuario, string codigo, string accion);
+    static int getCodigo(const std::string& modulo) {  // Cambiado a un solo parámetro
+        // Asigna códigos incrementales dentro del rango del módulo
+        if (rangos.find(modulo) == rangos.end()) {
+            rangos[modulo] = 3000; // Inicializa el rango base según módulo
+        }
+        return rangos[modulo]++;
+    }
+};
 
-    // Muestra las entradas registradas en la bitácora
-    void desplegar();
+// Inicialización de rangos (debe estar en el .cpp)
+// std::unordered_map<std::string, int> CodigosBitacora::rangos = {
+//     {"PEDIDOS", 3100}, {"ENVIOS", 3300}, {"INVENTARIO", 3200},
+//     {"FACTURACION", 3350}, {"REPORTES", 3400}, {"USUARIOS", 3000}
+// };
 
-    // Muestra un menú para acceder a la bitácora (solo desde administración)
-    void menuBitacora();
+class bitacora {
+public:
+    // Método para registrar acciones (cambiar de static a método normal si es necesario)
+    static void registrar(const std::string& usuario,
+                        const std::string& modulo,
+                        const std::string& descripcion);
+
+    // Método alternativo para compatibilidad
+    static void insertar(const std::string& usuario,
+                       const std::string& modulo,
+                       const std::string& descripcion) {
+        registrar(usuario, modulo, descripcion);
+    }
+
+    // Método para generar backups
+    static void generarBackup();
+
+    // Método para mostrar la bitácora
+    static void mostrarBitacora();
+
+    // Método del menú de bitácora
+    static void menuBitacora();
+
+private:
+    // Función interna para obtener fecha formateada
+    static std::string obtenerFechaActual();
 };
 
 #endif // BITACORA_H
