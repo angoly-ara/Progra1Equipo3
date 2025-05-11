@@ -1,0 +1,13 @@
+3000      Jennifer       REG-USER                      09/05/2025     
+3001      Jennifer       LOGIN                         09/05/2025     
+3150      Jennifer       Cliente agregado - ID: 3107   09/05/2025     
+3151      Jennifer       Cliente modificado - ID: 3107 09/05/2025     
+3152      Jennifer       Cliente modificado - ID: 3107 09/05/2025     
+3153      Jennifer       Cliente eliminado - ID: 3107  09/05/2025     
+3000      Jennifer       LOGIN                         09/05/2025     
+3150      Jennifer       Cliente agregado - ID: 3107   09/05/2025     
+3000      Jennifer       LOGIN                         09/05/2025     
+3150      Jennifer       Cliente agregado - ID: 3107   09/05/2025     
+3151      Jennifer       Cliente modificado - ID: 3107 09/05/2025     
+3000      Jennifer       LOGIN                         09/05/2025     
+3000      Jennifer       LOGIN                         09/05/2025     
