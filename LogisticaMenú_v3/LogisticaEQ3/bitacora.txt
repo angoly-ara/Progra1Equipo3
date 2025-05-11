@@ -11,3 +11,16 @@
 3151      Jennifer       Cliente modificado - ID: 3107 09/05/2025     
 3000      Jennifer       LOGIN                         09/05/2025     
 3000      Jennifer       LOGIN                         09/05/2025     
+3000      aleja          REG-USER                      11/05/2025     
+3001      aleja          LOGIN                         11/05/2025     
+3150      aleja          Cliente agregado - ID: 3108   11/05/2025     
+3000      aleja          Almacén creado - ID: 3260     11/05/2025     
+3000      til            REG-USER                      11/05/2025     
+3001      til            LOGIN                         11/05/2025     
+3000      til            LOGIN                         11/05/2025     
+3000      til            LOGIN                         11/05/2025     
+3000      til            Almacén creado - ID: 3261     11/05/2025     
+3001      til            Almacén creado - ID: 3262     11/05/2025     
+3002      til            Almacén modificado - ID: 3261 11/05/2025     
+3003      til            Almacén eliminado - ID: 3260  11/05/2025     
+3004      til            Almacén eliminado - ID: 3262  11/05/2025     
