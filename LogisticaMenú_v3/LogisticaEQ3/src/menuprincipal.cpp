@@ -11,6 +11,7 @@ using namespace std;
 void MenuPrincipal::mostrar(std::vector<Clientes>& clientes,
                            std::vector<Proveedor>& proveedores,
                            std::vector<Producto>& productos,
+                           std::vector<Almacen>& almacenes,
                            usuarios& usuarioActual) {
     int choice;
     do {
@@ -31,7 +32,7 @@ void MenuPrincipal::mostrar(std::vector<Clientes>& clientes,
 
         switch(choice) {
             case 1: MenuArchivo::mostrar(); break;
-            case 2: MenuCatalogos::mostrar(clientes, proveedores, productos, usuarioActual); break;
+            case 2: MenuCatalogos::mostrar(clientes, proveedores, productos, almacenes, usuarioActual); break;
             case 3: MenuProcesos::mostrar(); break;
             case 4: /* INFORMES */ break;
             case 5: return;
