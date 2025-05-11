@@ -258,15 +258,22 @@
 	<vector>
 	<string>
 
-1746834920 source:c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú_v3\logisticaeq3\src\producto.cpp
+1746987402 source:c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú_v3\logisticaeq3\src\producto.cpp
 	"Producto.h"
 	<iostream>
-	<algorithm>
-
-1746833798 c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú_v3\logisticaeq3\include\producto.h
-	<string>
 	<vector>
+	<algorithm>
 	<fstream>
+	<sstream>
+	<iomanip>
+	<string>
+	<limits>
+	"bitacora.h"
+
+1746987161 c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú_v3\logisticaeq3\include\producto.h
+	<vector>
+	<string>
+	"bitacora.h"
 
 1746834920 source:c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú_v3\logisticaeq3\src\proveedor.cpp
 	"Proveedor.h"
@@ -319,12 +326,13 @@
 
 1746829863 c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú_v3\logisticaeq3\include\menuprocesos.h
 
-1746833798 source:c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú_v3\logisticaeq3\src\menuproductos.cpp
-	"menuproductos.h"
+1746987161 source:c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú_v3\logisticaeq3\src\menuproductos.cpp
 	"MenuProductos.h"
+	"Producto.h"
 	<iostream>
+	<limits>
 
-1746833798 c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú_v3\logisticaeq3\include\menuproductos.h
+1746987161 c:\users\50240\documents\programacion1\progra1equipo3\logisticamenú_v3\logisticaeq3\include\menuproductos.h
 	<vector>
 	"Producto.h"
 	"usuarios.h"

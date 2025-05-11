@@ -11,3 +11,11 @@
 3151      Jennifer       Cliente modificado - ID: 3107 09/05/2025     
 3000      Jennifer       LOGIN                         09/05/2025     
 3000      Jennifer       LOGIN                         09/05/2025     
+3000      j              REG-USER                      10/05/2025     
+3001      j              LOGIN                         10/05/2025     
+3000      Jennifer       LOGIN                         11/05/2025     
+3250      Jennifer       Producto agregado - Código: 320911/05/2025     
+3251      Jennifer       Producto modificado - Código: 320911/05/2025     
+3000      Jennifer       LOGIN                         11/05/2025     
+3250      Jennifer       Producto agregado - Código: 321011/05/2025     
+3251      Jennifer       Producto eliminado - Código: 321011/05/2025     
