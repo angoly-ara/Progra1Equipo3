@@ -25,7 +25,7 @@ void Producto::mostrar(const vector<Producto>& lista) {
     for (const auto& prod : lista) {
         cout << "Código: " << prod.codigo
              << " | Nombre: " << prod.nombre
-             << " | Precio: $" << prod.precio
+             << " | Precio: Q" << prod.precio
              << " | Stock: " << prod.stock << "\n";
     }
 }
