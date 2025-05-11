@@ -1,5 +1,5 @@
 //Angoly Araujo Mayo 2025 9959-24-17623
-
+// Progra
 #include "proveedor.h"
 #include "bitacora.h"
 #include <iostream>
