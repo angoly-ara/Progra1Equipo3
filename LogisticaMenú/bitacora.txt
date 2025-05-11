@@ -1,4 +1,7 @@
 jennifer            000       LOGIN-FAIL     
+<<<<<<< HEAD
+Ale                 000       LOGIN-FAIL     
+=======
 a                   000       LOGIN-FAIL     
 a                   000       LOGIN-FAIL     
 a                   000       LOGIN-FAIL     
@@ -11,3 +14,4 @@ ajax                000       LOGIN-FAIL
 ajax                000       LOGIN          
 ajax                300       GUIA           
 ajax                100       NEWPED         
+>>>>>>> 70bb937f81c787286b3d05f03082f8e9c6bd3dc4
